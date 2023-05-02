@@ -1,0 +1,8 @@
+// Disable post autosave
+add_action('wp_print_scripts', 'disable_autosave');
+function disable_autosave()
+{
+    wp_deregister_script('autosave');
+}
+Cách 2: Vào wp_config.php thêm đoạn code sau đây:
+define('WP_POST_REVISIONS', false);
